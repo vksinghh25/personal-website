@@ -169,9 +169,6 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentBooksPage, setCurrentBooksPage] = useState(1);
 
-  // Add extra top padding if bookshelf or writing is active
-  const mainPaddingTop = ["bookshelf", "writing"].includes(activeSection) ? "pt-20" : "";
-
   // Calculate pagination for posts
   const totalPages = Math.ceil(linkedinPosts.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;
@@ -193,8 +190,8 @@ export default function Home() {
   };
 
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-center p-8 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white ${mainPaddingTop}`}>
-      <div className="relative mb-6 group -mt-12 z-10">
+    <main className={`flex min-h-screen flex-col items-center p-8 pt-24 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white`}>
+      <div className="relative mb-6 group z-10">
         <Image
           src="/vk.JPG"
           alt="Hero image"
