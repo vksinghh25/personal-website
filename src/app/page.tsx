@@ -190,8 +190,8 @@ export default function Home() {
   };
 
   return (
-    <main className={`flex min-h-screen flex-col items-center p-8 pt-24 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white`}>
-      <div className="relative mb-6 group z-10">
+    <main className={`flex min-h-screen flex-col items-center p-8 pt-24 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white overflow-visible relative`}>
+      <div className="relative mb-6 group z-20">
         <Image
           src="/vk.JPG"
           alt="Hero image"
