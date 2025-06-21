@@ -298,7 +298,9 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          sections[activeSection]
+          <div style={{ minHeight: '40vh' }}>
+            {sections[activeSection]}
+          </div>
         )}
       </div>
     </main>
