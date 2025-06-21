@@ -1,7 +1,6 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 const sections = {
   home: (
@@ -9,17 +8,17 @@ const sections = {
       <h2 className="text-2xl font-semibold mb-4">About Me</h2>
       <div className="text-base leading-relaxed space-y-4">
         <p>
-          I'm a <span className="font-semibold text-blue-300">Software Engineer at Google</span>, where I work on building
-          <span className="font-semibold text-green-300"> GenAI products</span> for Google Ads. I'm passionate about leveraging
+          I&apos;m a <span className="font-semibold text-blue-300">Software Engineer at Google</span>, where I work on building
+          <span className="font-semibold text-green-300"> GenAI products</span> for Google Ads. I&apos;m passionate about leveraging
           technology to solve complex problems and create innovative solutions that make a real impact.
         </p>
         <p>
-          When I'm not coding or thinking about AI, you'll find me <span className="font-semibold text-orange-300"> running</span> through the streets in Gurgaon & Bangalore, <span className="font-semibold text-purple-300"> reading</span> thought-provoking books, or 
+          When I&apos;m not coding or thinking about AI, you&apos;ll find me <span className="font-semibold text-orange-300"> running</span> through the streets in Gurgaon & Bangalore, <span className="font-semibold text-purple-300"> reading</span> thought-provoking books, or 
           <span className="font-semibold text-red-300"> lifting heavy weights</span> at the gym. These activities keep me
           balanced and constantly pushing my limits both mentally and physically.
         </p>
         <p className="text-sm text-gray-400 mt-6">
-          Feel free to explore my bookshelf to see what I'm reading, or check out my writing for insights on AI, technology, and life.
+          Feel free to explore my bookshelf to see what I&apos;m reading, or check out my writing for insights on AI, technology, and life.
         </p>
       </div>
     </div>
@@ -165,19 +164,6 @@ const books = [
 const postsPerPage = 3;
 const booksPerPage = 3;
 
-// Add a LinkedIn logo SVG for preview
-const LinkedInLogo = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="48" height="48" rx="12" fill="#0A66C2" fillOpacity="0.2" />
-    <path d="M14.5 19.5H19V34H14.5V19.5ZM16.75 16C15.65 16 14.75 16.9 14.75 18C14.75 19.1 15.65 20 16.75 20C17.85 20 18.75 19.1 18.75 18C18.75 16.9 17.85 16 16.75 16ZM21.5 19.5H25.75V21.13H25.81C26.39 20.09 27.67 19 29.54 19C33.13 19 33.75 21.13 33.75 24.13V34H29.25V25.13C29.25 23.63 29.22 21.63 27.25 21.63C25.25 21.63 25 23.34 25 25.25V34H20.5V19.5H21.5Z" fill="#0A66C2" fillOpacity="0.5" />
-  </svg>
-);
-
-// Helper: Get a placeholder title from the LinkedIn post URL
-function getLinkedInTitle(src: string, id: number) {
-  return `LinkedIn Post #${id}`;
-}
-
 export default function Home() {
   const [activeSection, setActiveSection] = useState<"home" | "bookshelf" | "writing">("home");
   const [currentPage, setCurrentPage] = useState(1);
@@ -240,7 +226,7 @@ export default function Home() {
           Writing
         </button>
       </div>
-      <h1 className="text-4xl font-bold mb-6">Hey, I'm Vipan!! <span role="img" aria-label="waving hand">👋</span></h1>
+      <h1 className="text-4xl font-bold mb-6">Hey, I&apos;m Vipan!! <span role="img" aria-label="waving hand">👋</span></h1>
       {/* Section content at the bottom */}
       <div className="w-full max-w-4xl mt-16 border-t pt-8">
         {activeSection === "writing" ? (
@@ -248,20 +234,10 @@ export default function Home() {
             <div className="text-center mb-8">
               <p className="text-gray-400 mb-4">For my latest work, find me on:</p>
               <div className="flex justify-center space-x-4">
-                <a
-                  href="https://www.linkedin.com/in/vksinghh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/vksinghh/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
                   LinkedIn
                 </a>
-                <a
-                  href="https://vksinghh.substack.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-orange-600 text-white font-semibold hover:bg-orange-700 transition-colors"
-                >
+                <a href="https://vksingh.substack.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-orange-500 rounded-md hover:bg-orange-600 transition-colors">
                   Substack
                 </a>
               </div>
@@ -275,7 +251,7 @@ export default function Home() {
                 >
                   <iframe
                     src={post.src}
-                    height={post.height}
+                    height="100%"
                     width="100%"
                     frameBorder="0"
                     allowFullScreen={true}
@@ -285,98 +261,44 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {/* Pagination */}
-            <div className="mt-8 pt-8 border-t border-zinc-700">
-              {totalPages > 1 && (
-                <div className="flex justify-center items-center space-x-2">
-                  <button
-                    className="px-3 py-2 rounded-md bg-zinc-800 text-gray-300 hover:bg-zinc-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    disabled={currentPage === 1}
-                  >
-                    Previous
-                  </button>
-                  <div className="flex space-x-1">
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        className={`px-3 py-2 rounded-md transition-colors ${
-                          currentPage === page
-                            ? "bg-blue-600 text-white"
-                            : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
-                        }`}
-                        onClick={() => handlePageChange(page)}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                  </div>
-                  <button
-                    className="px-3 py-2 rounded-md bg-zinc-800 text-gray-300 hover:bg-zinc-700 transition-colors"
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    disabled={currentPage === totalPages}
-                  >
-                    Next
-                  </button>
-                </div>
-              )}
+            {/* Pagination controls */}
+            <div className="flex justify-center space-x-2 mt-8">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <button
+                  key={page}
+                  className={`px-4 py-2 rounded-full ${currentPage === page ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              ))}
             </div>
           </div>
         ) : activeSection === "bookshelf" ? (
-          <div className="flex flex-col space-y-8">
-            <div className="text-center mb-4">
-              <blockquote className="text-xl italic font-semibold text-blue-300">"A reader lives a thousand lives before he dies."</blockquote>
-              <div className="text-sm text-gray-400 mt-2">— George R.R. Martin</div>
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {currentBooks.map(book => (
+                <div key={book.id} className="bg-zinc-800 rounded-lg p-6 shadow-lg border border-zinc-700 flex flex-col items-center text-center">
+                  <Image src={book.cover} alt={`Cover of ${book.title}`} width={150} height={225} className="rounded-md shadow-md mb-4 object-cover" />
+                  <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+                  <p className="text-sm text-gray-400 mb-1">by {book.author} ({book.year})</p>
+                  <p className="text-xs text-blue-400 mb-4">{book.genre}</p>
+                  <p className="text-sm text-gray-300 flex-grow">{book.description}</p>
+                </div>
+              ))}
             </div>
-            
-            {currentBooks.map((book) => (
-              <div key={book.id} className="flex items-start space-x-8 p-8 bg-zinc-900/80 rounded-lg shadow border border-zinc-700">
-                <img src={book.cover} alt={`${book.title} cover`} className="w-28 h-40 object-cover rounded shadow-md" />
-                <div className="flex flex-col justify-center flex-1">
-                  <div className="text-2xl font-bold mb-2">{book.title}</div>
-                  <div className="text-gray-300 mb-2">{book.author}</div>
-                  <div className="text-sm text-gray-400 mb-3">
-                    {book.year} • {book.genre}
-                  </div>
-                  <div className="text-base mb-3">{book.description}</div>
-                </div>
-              </div>
-            ))}
-            
-            {/* Bookshelf Pagination */}
-            {totalBooksPages > 1 && (
-              <div className="flex justify-center items-center space-x-2 mt-8 pt-8 border-t border-zinc-700">
-                <button 
-                  className="px-3 py-2 rounded-md bg-zinc-800 text-gray-300 hover:bg-zinc-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  onClick={() => handleBooksPageChange(currentBooksPage - 1)}
-                  disabled={currentBooksPage === 1}
+            {/* Pagination controls for books */}
+            <div className="flex justify-center space-x-2 mt-8">
+              {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map(page => (
+                <button
+                  key={page}
+                  className={`px-4 py-2 rounded-full ${currentBooksPage === page ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
+                  onClick={() => handleBooksPageChange(page)}
                 >
-                  Previous
+                  {page}
                 </button>
-                <div className="flex space-x-1">
-                  {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map((page) => (
-                    <button
-                      key={page}
-                      className={`px-3 py-2 rounded-md transition-colors ${
-                        currentBooksPage === page 
-                          ? "bg-blue-600 text-white" 
-                          : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
-                      }`}
-                      onClick={() => handleBooksPageChange(page)}
-                    >
-                      {page}
-                    </button>
-                  ))}
-                </div>
-                <button 
-                  className="px-3 py-2 rounded-md bg-zinc-800 text-gray-300 hover:bg-zinc-700 transition-colors"
-                  onClick={() => handleBooksPageChange(currentBooksPage + 1)}
-                  disabled={currentBooksPage === totalBooksPages}
-                >
-                  Next
-                </button>
-              </div>
-            )}
+              ))}
+            </div>
           </div>
         ) : (
           sections[activeSection]
