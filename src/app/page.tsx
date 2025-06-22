@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import HoverImageLink from "@/components/HoverImageLink";
 
 const sections = {
   home: (
@@ -8,17 +9,20 @@ const sections = {
       <h2 className="text-2xl font-semibold mb-4">About Me</h2>
       <div className="text-base leading-relaxed space-y-4">
         <p>
-          I&apos;m a <span className="font-semibold text-blue-300">Software Engineer at Google</span>, where I work on building
-          <span className="font-semibold text-green-300"> GenAI products</span> for Google Ads. I&apos;m passionate about leveraging
-          technology to solve complex problems and create innovative solutions that make a real impact.
+          I&apos;m a <span className="font-semibold text-blue-300">Software Engineer at Google</span>, currently wrangling
+          <span className="font-semibold text-green-300"> GenAI products</span> for the world of Ads. My goal is to leverage technology to solve complex problems and build products that make a genuine impact.
         </p>
         <p>
-          When I&apos;m not coding or thinking about AI, you&apos;ll find me <span className="font-semibold text-orange-300"> running</span> through the streets in Gurgaon & Bangalore, <span className="font-semibold text-purple-300"> reading</span> thought-provoking books, or 
-          <span className="font-semibold text-red-300"> lifting heavy weights</span> at the gym. These activities keep me
-          balanced and constantly pushing my limits both mentally and physically.
+          When I&apos;m not debugging code, I&apos;m usually debugging my own human OS. You&apos;ll find me stress-testing myself
+          <HoverImageLink imgSrc="/running.jpg">
+            <span className="font-semibold text-orange-300"> running through the streets</span>
+          </HoverImageLink> of Gurgaon & Bangalore, downloading new ideas from{" "}
+          <HoverImageLink imgSrc="/books.jpg">
+            <span className="font-semibold text-purple-300"> thought-provoking books</span>
+          </HoverImageLink>, or arguing with <HoverImageLink imgSrc="/gym.jpg"><span className="font-semibold text-red-300">gravity at the gym</span></HoverImageLink>.
         </p>
         <p className="text-sm text-gray-400 mt-6">
-          Feel free to explore my bookshelf to see what I&apos;m reading, or check out my writing for insights on AI, technology, and life.
+          Feel free to explore my bookshelf to see the source code for my thoughts, or check out my writing for musings on tech, AI, and other things I pretend to understand.
         </p>
       </div>
     </div>
