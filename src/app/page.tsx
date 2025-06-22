@@ -190,42 +190,49 @@ export default function Home() {
   };
 
   return (
-    <main className={`flex min-h-screen flex-col items-center p-8 pt-24 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white overflow-visible relative`}>
-      <div className="relative mb-6 group z-20">
-        <Image
-          src="/vk.JPG"
-          alt="Hero image"
-          width={160}
-          height={160}
-          className="rounded-full border-4 border-blue-500 shadow-2xl object-cover transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3"
-          priority
-        />
-        {/* Overlay for subtle shade */}
-        <div className="absolute inset-0 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+    <main className={`flex min-h-screen flex-col items-center p-8 pt-12 bg-gradient-to-br from-black via-zinc-900 to-zinc-800 text-white`}>
+      <div className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+        {/* Left side: Hero Image */}
+        <div className="relative group shrink-0">
+          <Image
+            src="/vk.JPG"
+            alt="Hero image"
+            width={160}
+            height={160}
+            className="rounded-full border-4 border-blue-500 shadow-2xl object-cover transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3"
+            priority
+          />
+          <div className="absolute inset-0 rounded-full bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        </div>
+
+        {/* Right side: Title and Navigation */}
+        <div className="flex flex-col items-center md:items-start">
+          <h1 className="text-4xl font-bold mb-4">Hey, I&apos;m Vipan!! <span role="img" aria-label="waving hand">👋</span></h1>
+          <div className="flex space-x-4">
+            <button
+              className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "home" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
+              onClick={() => setActiveSection("home")}
+            >
+              Home
+            </button>
+            <button
+              className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "bookshelf" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
+              onClick={() => setActiveSection("bookshelf")}
+            >
+              Bookshelf
+            </button>
+            <button
+              className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "writing" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
+              onClick={() => setActiveSection("writing")}
+            >
+              Writing
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex space-x-6 mb-8">
-        <button
-          className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "home" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
-          onClick={() => setActiveSection("home")}
-        >
-          Home
-        </button>
-        <button
-          className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "bookshelf" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
-          onClick={() => setActiveSection("bookshelf")}
-        >
-          Bookshelf
-        </button>
-        <button
-          className={`px-4 py-2 rounded-full font-medium transition-colors duration-200 ${activeSection === "writing" ? "bg-blue-400 text-white" : "bg-gray-200 text-gray-800 hover:bg-blue-100"}`}
-          onClick={() => setActiveSection("writing")}
-        >
-          Writing
-        </button>
-      </div>
-      <h1 className="text-4xl font-bold mb-6">Hey, I&apos;m Vipan!! <span role="img" aria-label="waving hand">👋</span></h1>
+      
       {/* Section content at the bottom */}
-      <div className="w-full max-w-4xl mt-16 border-t pt-8">
+      <div className="w-full max-w-4xl border-t pt-8">
         {activeSection === "writing" ? (
           <div>
             <div className="text-center mb-8">
