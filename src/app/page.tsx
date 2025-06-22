@@ -282,7 +282,7 @@ export default function Home() {
           <div className="flex flex-col space-y-8">
             {currentBooks.map((book) => (
               <div key={book.id} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 p-6 bg-zinc-900/80 rounded-lg shadow border border-zinc-700">
-                <Image src={book.cover} alt={`${book.title} cover`} width={112} height={160} className="w-28 h-40 object-cover rounded shadow-md shrink-0" />
+                <Image src={book.cover} alt={`${book.title} cover`} width={144} height={208} className="w-36 h-52 object-cover rounded shadow-md shrink-0" />
                 <div className="flex flex-col text-center md:text-left">
                   <h3 className="text-2xl font-bold mb-2">{book.title}</h3>
                   <p className="text-gray-300 mb-2">by {book.author}</p>
