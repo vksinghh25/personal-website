@@ -279,24 +279,30 @@ export default function Home() {
             </div>
           </div>
         ) : activeSection === "bookshelf" ? (
-          <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {currentBooks.map(book => (
-                <div key={book.id} className="bg-zinc-800 rounded-lg p-6 shadow-lg border border-zinc-700 flex flex-col items-center text-center">
-                  <Image src={book.cover} alt={`Cover of ${book.title}`} width={150} height={225} className="rounded-md shadow-md mb-4 object-cover" />
-                  <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-                  <p className="text-sm text-gray-400 mb-1">by {book.author} ({book.year})</p>
-                  <p className="text-xs text-blue-400 mb-4">{book.genre}</p>
-                  <p className="text-sm text-gray-300 flex-grow">{book.description}</p>
+          <div className="flex flex-col space-y-8">
+            {currentBooks.map((book) => (
+              <div key={book.id} className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8 p-6 bg-zinc-900/80 rounded-lg shadow border border-zinc-700">
+                <Image src={book.cover} alt={`${book.title} cover`} width={112} height={160} className="w-28 h-40 object-cover rounded shadow-md shrink-0" />
+                <div className="flex flex-col text-center md:text-left">
+                  <h3 className="text-2xl font-bold mb-2">{book.title}</h3>
+                  <p className="text-gray-300 mb-2">by {book.author}</p>
+                  <p className="text-sm text-gray-400 mb-3">
+                    {book.year} • {book.genre}
+                  </p>
+                  <p className="text-base">{book.description}</p>
                 </div>
-              ))}
-            </div>
-            {/* Pagination controls for books */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map(page => (
+              </div>
+            ))}
+            {/* Bookshelf Pagination */}
+            <div className="flex justify-center items-center space-x-2 mt-8">
+              {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map((page) => (
                 <button
                   key={page}
-                  className={`px-4 py-2 rounded-full ${currentBooksPage === page ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
+                  className={`px-4 py-2 rounded-full transition-colors ${
+                    currentBooksPage === page 
+                      ? "bg-blue-600 text-white" 
+                      : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
+                  }`}
                   onClick={() => handleBooksPageChange(page)}
                 >
                   {page}
