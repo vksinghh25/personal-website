@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import HoverImageLink from "@/components/HoverImageLink";
 
 const sections = {
@@ -330,16 +330,12 @@ export default function Home() {
                 </div>
               </div>
             ))}
-            {/* Bookshelf Pagination */}
-            <div className="flex justify-center items-center space-x-2 mt-8">
-              {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map((page) => (
+            {/* Bookshelf Pagination: Match Writings Page */}
+            <div className="flex justify-center space-x-2 mt-8">
+              {Array.from({ length: totalBooksPages }, (_, i) => i + 1).map(page => (
                 <button
                   key={page}
-                  className={`px-4 py-2 rounded-full transition-colors ${
-                    currentBooksPage === page 
-                      ? "bg-blue-600 text-white" 
-                      : "bg-zinc-800 text-gray-300 hover:bg-zinc-700"
-                  }`}
+                  className={`px-4 py-2 rounded-full ${currentBooksPage === page ? 'bg-blue-500 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
                   onClick={() => handleBooksPageChange(page)}
                 >
                   {page}
