@@ -294,6 +294,39 @@ export default function Home() {
                     {book.year} • {book.genre}
                   </p>
                   <p className="text-base">{book.description}</p>
+                  {/* Inspiring quote */}
+                  <p className="mt-4 italic text-blue-400 text-base">“{(() => {
+                    switch (book.title) {
+                      case "Sapiens":
+                        return "You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven.";
+                      case "The Psychology of Money":
+                        return "Money's greatest intrinsic value—and this can't be overstated—is its ability to give you control over your time.";
+                      case "12 Rules for Life":
+                        return "Compare yourself to who you were yesterday, not to who someone else is today.";
+                      case "The Brothers Karamazov":
+                        return "The mystery of human existence lies not in just staying alive, but in finding something to live for.";
+                      case "To Kill a Mockingbird":
+                        return "You never really understand a person until you consider things from his point of view… Until you climb inside of his skin and walk around in it.";
+                      case "The Stranger":
+                        return "I may not have been sure about what really did interest me, but I was absolutely sure about what didn't.";
+                      case "Letters from Seneca":
+                        return "We suffer more often in imagination than in reality.";
+                      case "The Almanack of Naval Ravikant":
+                        return "Desire is a contract you make with yourself to be unhappy until you get what you want.";
+                      case "Crime and Punishment":
+                        return "To go wrong in one's own way is better than to go right in someone else's.";
+                      case "The 7 Habits of Highly Effective People":
+                        return "I am not a product of my circumstances. I am a product of my decisions.";
+                      case "Atomic Habits":
+                        return "You do not rise to the level of your goals. You fall to the level of your systems.";
+                      case "The Diary of a Young Girl":
+                        return "In spite of everything, I still believe that people are really good at heart.";
+                      case "Man's Search for Meaning":
+                        return "When we are no longer able to change a situation, we are challenged to change ourselves.";
+                      default:
+                        return "";
+                    }
+                  })()}”</p>
                 </div>
               </div>
             ))}
