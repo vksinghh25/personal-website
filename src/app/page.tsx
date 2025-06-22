@@ -298,7 +298,7 @@ export default function Home() {
                   <p className="mt-4 italic text-blue-400 text-base">“{(() => {
                     switch (book.title) {
                       case "Sapiens":
-                        return "You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven.";
+                        return "One of history's few iron laws is that luxuries tend to become necessities and to spawn new obligations.";
                       case "The Psychology of Money":
                         return "Money's greatest intrinsic value—and this can't be overstated—is its ability to give you control over your time.";
                       case "12 Rules for Life":
