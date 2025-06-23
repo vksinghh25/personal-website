@@ -47,13 +47,13 @@ const linkedinPosts = [
 // Books data with additional information
 const books = [
   {
-    id: 1,
-    title: "Sapiens",
-    author: "Yuval Noah Harari",
-    cover: "/sapiens.jpg",
-    description: "A brief history of humankind, exploring how Homo sapiens became the planet's dominant species.",
-    year: 2011,
-    genre: "History, Anthropology"
+    id: 3,
+    title: "12 Rules for Life",
+    author: "Jordan B. Peterson",
+    cover: "/rules.jpg",
+    description: "A practical guide to living a meaningful life, blending psychology, philosophy, and personal anecdotes.",
+    year: 2018,
+    genre: "Self-Help, Philosophy"
   },
   {
     id: 2,
@@ -65,13 +65,13 @@ const books = [
     genre: "Finance, Psychology"
   },
   {
-    id: 3,
-    title: "12 Rules for Life",
-    author: "Jordan B. Peterson",
-    cover: "/rules.jpg",
-    description: "A practical guide to living a meaningful life, blending psychology, philosophy, and personal anecdotes.",
-    year: 2018,
-    genre: "Self-Help, Philosophy"
+    id: 1,
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    cover: "/sapiens.jpg",
+    description: "A brief history of humankind, exploring how Homo sapiens became the planet's dominant species.",
+    year: 2011,
+    genre: "History, Anthropology"
   },
   {
     id: 4,
