@@ -162,7 +162,25 @@ const books = [
     description: "A psychiatrist's memoir of surviving the Holocaust and his development of logotherapy, exploring how finding meaning in suffering can lead to resilience.",
     year: 1946,
     genre: "Psychology, Philosophy"
-  }
+  },
+  {
+    id: 14,
+    title: "Invisible Man",
+    author: "Ralph Ellison",
+    cover: "/invisible.jpg",
+    description: "A powerful novel about race, identity, and invisibility in 20th-century America, following an unnamed Black protagonist's journey.",
+    year: 1952,
+    genre: "Classic Literature, Social Commentary"
+  },
+  {
+    id: 15,
+    title: "Born to Run",
+    author: "Christopher McDougall",
+    cover: "/born-to-run.jpg",
+    description: "A fascinating exploration of the world's greatest distance runners and the secrets of human endurance, blending adventure, science, and the joy of running.",
+    year: 2009,
+    genre: "Sports, Adventure"
+  },
 ];
 
 const postsPerPage = 3;
@@ -323,6 +341,10 @@ export default function Home() {
                         return "In spite of everything, I still believe that people are really good at heart.";
                       case "Man's Search for Meaning":
                         return "When we are no longer able to change a situation, we are challenged to change ourselves.";
+                      case "Invisible Man":
+                        return "When I discover who I am, I'll be free.";
+                      case "Born to Run":
+                        return "You don't stop running because you get old, you get old because you stop running.";
                       default:
                         return "";
                     }
