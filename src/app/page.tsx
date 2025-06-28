@@ -56,31 +56,13 @@ const books = [
     genre: "Self-Help, Philosophy"
   },
   {
-    id: 2,
-    title: "The Psychology of Money",
-    author: "Morgan Housel",
-    cover: "/psy.jpg",
-    description: "Timeless lessons on wealth, greed, and happiness, focusing on the human side of finance.",
-    year: 2020,
-    genre: "Finance, Psychology"
-  },
-  {
-    id: 1,
-    title: "Sapiens",
-    author: "Yuval Noah Harari",
-    cover: "/sapiens.jpg",
-    description: "A brief history of humankind, exploring how Homo sapiens became the planet's dominant species.",
-    year: 2011,
-    genre: "History, Anthropology"
-  },
-  {
-    id: 4,
-    title: "The Brothers Karamazov",
-    author: "Fyodor Dostoevsky",
-    cover: "/brothers.jpg",
-    description: "A profound exploration of faith, doubt, and morality in one of the greatest novels ever written.",
-    year: 1880,
-    genre: "Classic Literature, Philosophy"
+    id: 15,
+    title: "Born to Run",
+    author: "Christopher McDougall",
+    cover: "/born-to-run.jpg",
+    description: "A fascinating exploration of the world's greatest distance runners and the secrets of human endurance, blending adventure, science, and the joy of running.",
+    year: 2009,
+    genre: "Sports, Adventure"
   },
   {
     id: 5,
@@ -92,15 +74,6 @@ const books = [
     genre: "Classic Literature, Social Justice"
   },
   {
-    id: 6,
-    title: "The Stranger",
-    author: "Albert Camus",
-    cover: "/stranger.jpg",
-    description: "A classic of existential literature, exploring absurdity and detachment through the story of Meursault in French Algeria.",
-    year: 1942,
-    genre: "Existentialism, Philosophy"
-  },
-  {
     id: 7,
     title: "Letters from Seneca",
     author: "Seneca",
@@ -108,6 +81,51 @@ const books = [
     description: "A collection of moral epistles offering timeless wisdom on Stoic philosophy, virtue, and the art of living well.",
     year: 65,
     genre: "Philosophy, Stoicism"
+  },
+  {
+    id: 9,
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    cover: "/crime.jpg",
+    description: "A psychological thriller exploring guilt, redemption, and the human condition through the story of a young man who commits murder.",
+    year: 1866,
+    genre: "Classic Literature, Psychology"
+  },
+  {
+    id: 2,
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    cover: "/psy.jpg",
+    description: "Timeless lessons on wealth, greed, and happiness, focusing on the human side of finance.",
+    year: 2020,
+    genre: "Finance, Psychology"
+  },
+  {
+    id: 12,
+    title: "The Diary of a Young Girl",
+    author: "Anne Frank",
+    cover: "/diary.jpg",
+    description: "The powerful and moving diary of a young Jewish girl hiding from the Nazis during World War II, offering a unique perspective on hope and humanity.",
+    year: 1947,
+    genre: "Memoir, History"
+  },
+  {
+    id: 14,
+    title: "Invisible Man",
+    author: "Ralph Ellison",
+    cover: "/invisible.jpg",
+    description: "A powerful novel about race, identity, and invisibility in 20th-century America, following an unnamed Black protagonist's journey.",
+    year: 1952,
+    genre: "Classic Literature, Social Commentary"
+  },
+  {
+    id: 13,
+    title: "Man's Search for Meaning",
+    author: "Viktor E. Frankl",
+    cover: "/search.jpg",
+    description: "A psychiatrist's memoir of surviving the Holocaust and his development of logotherapy, exploring how finding meaning in suffering can lead to resilience.",
+    year: 1946,
+    genre: "Psychology, Philosophy"
   },
   {
     id: 8,
@@ -119,13 +137,22 @@ const books = [
     genre: "Philosophy, Self-Help"
   },
   {
-    id: 9,
-    title: "Crime and Punishment",
+    id: 4,
+    title: "The Brothers Karamazov",
     author: "Fyodor Dostoevsky",
-    cover: "/crime.jpg",
-    description: "A psychological thriller exploring guilt, redemption, and the human condition through the story of a young man who commits murder.",
-    year: 1866,
-    genre: "Classic Literature, Psychology"
+    cover: "/brothers.jpg",
+    description: "A profound exploration of faith, doubt, and morality in one of the greatest novels ever written.",
+    year: 1880,
+    genre: "Classic Literature, Philosophy"
+  },
+  {
+    id: 6,
+    title: "The Stranger",
+    author: "Albert Camus",
+    cover: "/stranger.jpg",
+    description: "A classic of existential literature, exploring absurdity and detachment through the story of Meursault in French Algeria.",
+    year: 1942,
+    genre: "Existentialism, Philosophy"
   },
   {
     id: 10,
@@ -146,41 +173,14 @@ const books = [
     genre: "Self-Help, Psychology"
   },
   {
-    id: 12,
-    title: "The Diary of a Young Girl",
-    author: "Anne Frank",
-    cover: "/diary.jpg",
-    description: "The powerful and moving diary of a young Jewish girl hiding from the Nazis during World War II, offering a unique perspective on hope and humanity.",
-    year: 1947,
-    genre: "Memoir, History"
-  },
-  {
-    id: 13,
-    title: "Man's Search for Meaning",
-    author: "Viktor E. Frankl",
-    cover: "/search.jpg",
-    description: "A psychiatrist's memoir of surviving the Holocaust and his development of logotherapy, exploring how finding meaning in suffering can lead to resilience.",
-    year: 1946,
-    genre: "Psychology, Philosophy"
-  },
-  {
-    id: 14,
-    title: "Invisible Man",
-    author: "Ralph Ellison",
-    cover: "/invisible.jpg",
-    description: "A powerful novel about race, identity, and invisibility in 20th-century America, following an unnamed Black protagonist's journey.",
-    year: 1952,
-    genre: "Classic Literature, Social Commentary"
-  },
-  {
-    id: 15,
-    title: "Born to Run",
-    author: "Christopher McDougall",
-    cover: "/born-to-run.jpg",
-    description: "A fascinating exploration of the world's greatest distance runners and the secrets of human endurance, blending adventure, science, and the joy of running.",
-    year: 2009,
-    genre: "Sports, Adventure"
-  },
+    id: 1,
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    cover: "/sapiens.jpg",
+    description: "A brief history of humankind, exploring how Homo sapiens became the planet's dominant species.",
+    year: 2011,
+    genre: "History, Anthropology"
+  }
 ];
 
 const postsPerPage = 3;
