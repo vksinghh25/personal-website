@@ -263,7 +263,7 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/vksinghh/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
                   LinkedIn
                 </a>
-                <a href="https://vksingh.substack.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-orange-500 rounded-md hover:bg-orange-600 transition-colors">
+                <a href="https://vksinghh.substack.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-orange-500 rounded-md hover:bg-orange-600 transition-colors">
                   Substack
                 </a>
               </div>
